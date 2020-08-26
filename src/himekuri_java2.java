@@ -16,7 +16,7 @@ class Ruco extends Thread {
     final static String reiwa_alpha = "R0";
     final Calendar cal = Calendar.getInstance();
     final String reiwa_beta = (reiwa_kanji + (cal.get(cal.YEAR)-2018) + "年" + (cal.get(cal.MONTH)+1)+ "月" + cal.get(cal.DAY_OF_MONTH)+"日");
-	final String reiwa_delta = (reiwa_alpha + (cal.get(cal.YEAR) - 2018) + "." + (cal.get(cal.MONTH)+1) + "." + cal.get(cal.DAY_OF_MONTH));
+    final String reiwa_delta = (reiwa_alpha + (cal.get(cal.YEAR) - 2018) + "." + (cal.get(cal.MONTH)+1) + "." + cal.get(cal.DAY_OF_MONTH));
     final int nichi = cal.get(cal.DAY_OF_YEAR);
     final int getsu = cal.getActualMaximum(cal.DAY_OF_YEAR);
 
