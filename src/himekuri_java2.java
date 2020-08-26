@@ -17,8 +17,8 @@ class Ruco extends Thread {
     final Calendar cal = Calendar.getInstance();
     final String reiwa_beta = (reiwa_kanji + (cal.get(cal.YEAR)-2018) + "年" + (cal.get(cal.MONTH)+1)+ "月" + cal.get(cal.DAY_OF_MONTH)+"日");
     final String reiwa_delta = (reiwa_alpha + (cal.get(cal.YEAR) - 2018) + "." + (cal.get(cal.MONTH)+1) + "." + cal.get(cal.DAY_OF_MONTH));
-    final int nichi = cal.get(cal.DAY_OF_YEAR);
-    final int getsu = cal.getActualMaximum(cal.DAY_OF_YEAR);
+    final int nen_nichi = cal.get(cal.DAY_OF_YEAR);
+    final int nen_getsu = cal.getActualMaximum(cal.DAY_OF_YEAR);
 
     public void himekuri() {
         try {
@@ -30,7 +30,7 @@ class Ruco extends Thread {
 
             // himekuri function
             System.out.println(sdf_koyomi.format(cal.getTime()));
-            System.out.println("来年の1月1日まであと : " + (getsu - nichi) + "日です");
+            System.out.println("来年の1月1日まであと : " + (nen_getsu - nen_nichi) + "日です");
             cal.setTime(date);
             System.out.println(reiwa_beta + " : " + reiwa_delta);
 
@@ -88,7 +88,7 @@ public class himekuri_java2 {
 		catch (Exception exe)
 		{
 		    System.err.println("Exception catch  ...");
-		    exe.printStackTrace(System.out);
+			exe.printStackTrace(System.out);
 		}
     }
 }
