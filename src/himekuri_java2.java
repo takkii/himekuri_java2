@@ -23,18 +23,18 @@ class Ruco extends Thread {
     public void himekuri() {
         try {
 
-			// thread start
+            // thread start
             final Ruco thread = new Ruco();
             thread.setDaemon(true);
             thread.start();
 
-			// himekuri function
+            // himekuri function
             System.out.println(sdf_koyomi.format(cal.getTime()));
             System.out.println("来年の1月1日まであと : " + (getsu - nichi) + "日です");
             cal.setTime(date);
             System.out.println(reiwa_beta + " : " + reiwa_delta);
 
-			// thread join
+            // thread join
             thread.join();
 
         } catch (Exception e) {
@@ -52,13 +52,13 @@ class Seel extends Thread {
     public void himekuri() {
         try {
             // thread start
-			final Seel thread = new Seel();
+            final Seel thread = new Seel();
             thread.start();
 
-			// System out println call
+            // System out println call
             System.out.println(himekuriVersion);
 
-			// thread join
+            // thread join
             thread.join();
 
         } catch (Exception ex) {
@@ -76,19 +76,19 @@ public class himekuri_java2 {
 
 		try
 		{
-			// SubClass call
-			final Ruco c = new Ruco();
-			c.himekuri();
+		    // SubClass call
+		    final Ruco c = new Ruco();
+		    c.himekuri();
 
-			// SubClass call
-			final Seel objc = new Seel();
-			objc.himekuri();
+		    // SubClass call
+		    final Seel objc = new Seel();
+		    objc.himekuri();
 		}
 
 		catch (Exception exe)
 		{
-			System.err.println("Exception catch  ...");
-			exe.printStackTrace(System.out);
+		    System.err.println("Exception catch  ...");
+		    exe.printStackTrace(System.out);
 		}
     }
 }
