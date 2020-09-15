@@ -12,7 +12,7 @@ class Ruco extends Thread {
     final Date date = new Date();
     final SimpleDateFormat sdf_koyomi = new SimpleDateFormat("yyyy年MM月dd日HH時mm分ss秒：EEEE");
     final static String reiwa_kanji = "令和";
-	// Delete when "0" becomes "10". 
+	// Delete when "0" becomes "10".
     final static String reiwa_alpha = "R0";
     final Calendar cal = Calendar.getInstance();
     final String reiwa_beta = (reiwa_kanji + (cal.get(cal.YEAR)-2018) + "年" + (cal.get(cal.MONTH)+1)+ "月" + cal.get(cal.DAY_OF_MONTH)+"日");
@@ -46,8 +46,9 @@ class Ruco extends Thread {
 
 // Seel is SubClass
 class Seel extends Thread {
-    String version = "1.0.0";
-    String himekuriVersion = "日めくり(JDK8)の数え番号 ： " + version;
+    String RivisionNumber = "1.0.1R1";
+    String himekuriVersion = "日めくり(JDK8)の数え番号 ： ";
+    String version = himekuriVersion + RivisionNumber;
 
     public void himekuri() {
         try {
@@ -56,7 +57,7 @@ class Seel extends Thread {
             thread.start();
 
             // System out println call
-            System.out.println(himekuriVersion);
+            System.out.println(version);
 
             // thread join
             thread.join();
