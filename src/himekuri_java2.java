@@ -1,8 +1,9 @@
-/**
+/*
  * himekuri JDK8 version.
  */
 
 import java.text.SimpleDateFormat;
+import java.time.DateTimeException;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -15,10 +16,10 @@ class Ruco extends Thread {
 	// Delete when "0" becomes "10".
     final static String reiwa_alpha = "R0";
     final Calendar cal = Calendar.getInstance();
-    final String reiwa_beta = (reiwa_kanji + (cal.get(cal.YEAR)-2018) + "年" + (cal.get(cal.MONTH)+1)+ "月" + cal.get(cal.DAY_OF_MONTH)+"日");
-    final String reiwa_delta = (reiwa_alpha + (cal.get(cal.YEAR) - 2018) + "." + (cal.get(cal.MONTH)+1) + "." + cal.get(cal.DAY_OF_MONTH));
-    final int nen_nichi = cal.get(cal.DAY_OF_YEAR);
-    final int nen_getsu = cal.getActualMaximum(cal.DAY_OF_YEAR);
+    final String reiwa_beta = (reiwa_kanji + (cal.get(Calendar.YEAR)-2018) + "年" + (cal.get(Calendar.MONTH)+1)+ "月" + cal.get(Calendar.DAY_OF_MONTH)+"日");
+    final String reiwa_delta = (reiwa_alpha + (cal.get(Calendar.YEAR) - 2018) + "." + (cal.get(Calendar.MONTH)+1) + "." + cal.get(Calendar.DAY_OF_MONTH));
+    final int nen_nichi = cal.get(Calendar.DAY_OF_YEAR);
+    final int nen_getsu = cal.getActualMaximum(Calendar.DAY_OF_YEAR);
 
     public void himekuri() {
         try {
@@ -86,7 +87,7 @@ public class himekuri_java2 {
 		    objc.himekuri();
 		}
 
-		catch (Exception exe)
+		catch (DateTimeException exe)
 		{
 		    System.err.println("Exception catch  ...");
 			exe.printStackTrace(System.out);
