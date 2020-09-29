@@ -20,6 +20,9 @@ class Ruco extends Thread {
     final String reiwa_delta = (reiwa_alpha + (cal.get(Calendar.YEAR) - 2018) + "." + (cal.get(Calendar.MONTH) + 1) + "." + cal.get(Calendar.DAY_OF_MONTH));
     final int nen_nichi = cal.get(Calendar.DAY_OF_YEAR);
     final int nen_getsu = cal.getActualMaximum(Calendar.DAY_OF_YEAR);
+    final int one_year = (nen_getsu - nen_nichi);
+    Integer int_year = one_year;
+    final String string_year = int_year.toString();
 
     public void himekuri() {
         try {
@@ -31,7 +34,7 @@ class Ruco extends Thread {
 
             // himekuri function
             System.out.println(sdf_koyomi.format(cal.getTime()));
-            System.out.println("来年の1月1日まであと : " + (nen_getsu - nen_nichi) + "日です");
+            System.out.println("来年の1月1日まであと : " + string_year + "日です");
             cal.setTime(date);
             System.out.println(reiwa_beta + " : " + reiwa_delta);
 
