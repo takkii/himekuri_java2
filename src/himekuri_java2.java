@@ -35,10 +35,10 @@ class Ruco extends Thread {
             thread.start();
 
             // himekuri function
-            System.out.println(koyomi);
-            System.out.println("来年の1月1日まであと : " + string_year + "日です");
-            cal.setTime(date);
-            System.out.println(reiwa);
+            System.out.println(this.koyomi);
+            System.out.println("来年の1月1日まであと : " + this.string_year + "日です");
+            cal.setTime(this.date);
+            System.out.println(this.reiwa);
 
             // thread join
             thread.join();
@@ -63,7 +63,7 @@ class Seel extends Thread {
             thread.start();
 
             // System out println call
-            System.out.println(version);
+            System.out.println(this.version);
 
             // thread join
             thread.join();
