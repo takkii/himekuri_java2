@@ -52,7 +52,7 @@ class Ruco extends Thread {
 
 // Seel is SubClass
 class Seel extends Thread {
-    String RivisionNumber = "1.0.1";
+    String RivisionNumber = "1.0.2";
     String himekuriVersion = "日めくりの数え番号 ： ";
     String version = himekuriVersion + RivisionNumber;
 
