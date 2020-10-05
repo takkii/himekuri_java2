@@ -37,7 +37,7 @@ class Ruco extends Thread {
 
             // himekuri function
             System.out.println(this.koyomi);
-            System.out.println("来年の1月1日まであと" + comma + this.string_year + "日です");
+            System.out.println("来年の1月1日まであと" + this.comma + this.string_year + "日です");
             cal.setTime(this.date);
             System.out.println(this.reiwa);
 
@@ -56,7 +56,7 @@ class Seel extends Thread {
     final String comma = " : ";
     final String RivisionNumber = "1.0.2";
     final String himekuriVersion = "日めくりの数え番号";
-    final String version = himekuriVersion + comma + RivisionNumber;
+    final String version = this.himekuriVersion + this.comma + this.RivisionNumber;
 
     public void himekuri() {
         try {
