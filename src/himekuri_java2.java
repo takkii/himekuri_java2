@@ -18,7 +18,8 @@ class Ruco extends Thread {
     final Calendar cal = Calendar.getInstance();
     final String reiwa_beta = (reiwa_kanji + (cal.get(Calendar.YEAR) - 2018) + "年" + (cal.get(Calendar.MONTH) + 1) + "月" + cal.get(Calendar.DAY_OF_MONTH) + "日");
     final String reiwa_delta = (reiwa_alpha + (cal.get(Calendar.YEAR) - 2018) + "." + (cal.get(Calendar.MONTH) + 1) + "." + cal.get(Calendar.DAY_OF_MONTH));
-    final String reiwa = reiwa_beta + " : " + reiwa_delta;
+    final String comma = " : ";
+    final String reiwa = reiwa_beta + comma + reiwa_delta;
     final int nen_nichi = cal.get(Calendar.DAY_OF_YEAR);
     final int nen_getsu = cal.getActualMaximum(Calendar.DAY_OF_YEAR);
     final String koyomi = sdf_koyomi.format(cal.getTime());
@@ -36,7 +37,7 @@ class Ruco extends Thread {
 
             // himekuri function
             System.out.println(this.koyomi);
-            System.out.println("来年の1月1日まであと : " + this.string_year + "日です");
+            System.out.println("来年の1月1日まであと" + comma + this.string_year + "日です");
             cal.setTime(this.date);
             System.out.println(this.reiwa);
 
@@ -52,9 +53,10 @@ class Ruco extends Thread {
 
 // Seel is SubClass
 class Seel extends Thread {
-    String RivisionNumber = "1.0.2";
-    String himekuriVersion = "日めくりの数え番号 ： ";
-    String version = himekuriVersion + RivisionNumber;
+    final String comma = " : ";
+    final String RivisionNumber = "1.0.2";
+    final String himekuriVersion = "日めくりの数え番号";
+    final String version = himekuriVersion + comma + RivisionNumber;
 
     public void himekuri() {
         try {
