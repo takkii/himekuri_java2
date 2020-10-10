@@ -2,10 +2,10 @@
  * himekuri JDK8 version.
  */
 
-import java.text.SimpleDateFormat;
-import java.time.DateTimeException;
 import java.util.Calendar;
 import java.util.Date;
+import java.time.DateTimeException;
+import java.text.SimpleDateFormat;
 
 // Ruco is SubClass.
 class Ruco extends Thread {
