@@ -44,8 +44,8 @@ class Ruco extends Thread {
             // thread join
             thread.join();
 
-        } catch (Exception e) {
-            System.err.println("Exceptionエラーを捕捉しました...");
+        } catch (InterruptedException | SecurityException e) {
+            System.err.println("例外を捕捉しました ... ");
             e.printStackTrace(System.out);
         }
     }
@@ -70,8 +70,8 @@ class Seel extends Thread {
             // thread join
             thread.join();
 
-        } catch (Exception ex) {
-            System.err.println("Exceptionエラーを捕捉しました...");
+        } catch (SecurityException | InterruptedException ex) {
+            System.err.println("例外を捕捉しました ... ");
             ex.printStackTrace(System.out);
         }
     }
@@ -92,7 +92,7 @@ public class himekuri_java2 {
             final Seel objc = new Seel();
             objc.himekuri();
         } catch (DateTimeException exe) {
-            System.err.println("Exception catch  ...");
+            System.err.println("例外を捕捉しました ... ");
             exe.printStackTrace(System.out);
         }
     }
