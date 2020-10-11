@@ -11,3 +11,13 @@
 /nbproject/private/private.xml
 /nbproject/project.properties
 /nbproject/project.xml
+Himekuri_java2.iml
+.idea/.gitignore
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+out/production/Himekuri_java2/himekuri_java2.class
+out/production/Himekuri_java2/Ruco.class
+out/production/Himekuri_java2/Seel.class
