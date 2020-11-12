@@ -58,7 +58,7 @@ class Seel extends Thread {
     // major version number set.
     final double TopNumber = 1.0;
     // use, fix change update version number.
-    final int lastNumber = 2;
+    final int lastNumber = 3;
     // use number layout control.
     final String zero_comma = ".";
 
