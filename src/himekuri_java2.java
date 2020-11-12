@@ -54,9 +54,23 @@ class Ruco extends Thread {
 // Seel is SubClass
 class Seel extends Thread {
     final String comma = " : ";
-    final String RivisionNumber = "1.0.2";
+
+    // major version number set.
+    final double TopNumber = 1.0;
+    // use, fix change update version number.
+    final int lastNumber = 2;
+    // use number layout control.
+    final String zero_comma = ".";
+
+    // version number set.
+    double Number = TopNumber;
+    final String string_number = String.valueOf(Number);
+    Integer string_lastNumber = lastNumber;
+    final String version_lastnumber  = string_lastNumber.toString();
+    final String version_number = string_number + zero_comma + version_lastnumber;
+
     final String himekuriVersion = "日めくりの数え番号";
-    final String version = this.himekuriVersion + this.comma + this.RivisionNumber;
+    final String version = this.himekuriVersion + this.comma + this.version_number;
 
     public void himekuri() {
         try {
