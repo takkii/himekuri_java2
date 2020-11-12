@@ -16,8 +16,9 @@ class Ruco extends Thread {
     final Date date = new Date();
     final SimpleDateFormat sdf_koyomi = new SimpleDateFormat("yyyy年MM月dd日HH時mm分ss秒 ： EEEE");
     final Calendar cal = Calendar.getInstance();
-    final String reiwa_beta = (reiwa_kanji + (cal.get(Calendar.YEAR) - 2018) + "年" + (cal.get(Calendar.MONTH) + 1) + "月" + cal.get(Calendar.DAY_OF_MONTH) + "日");
-    final String reiwa_delta = (reiwa_alpha + (cal.get(Calendar.YEAR) - 2018) + "." + (cal.get(Calendar.MONTH) + 1) + "." + cal.get(Calendar.DAY_OF_MONTH));
+    final String reiwa_year = String.valueOf(cal.get(Calendar.YEAR) - 2018);
+    final String reiwa_beta = (reiwa_kanji + (reiwa_year) + "年" + (cal.get(Calendar.MONTH) + 1) + "月" + cal.get(Calendar.DAY_OF_MONTH) + "日");
+    final String reiwa_delta = (reiwa_alpha + (reiwa_year) + "." + (cal.get(Calendar.MONTH) + 1) + "." + cal.get(Calendar.DAY_OF_MONTH));
     final String comma = " : ";
     final String reiwa = reiwa_beta + comma + reiwa_delta;
     final int nen_nichi = cal.get(Calendar.DAY_OF_YEAR);
